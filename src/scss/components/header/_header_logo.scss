@@ -1,0 +1,16 @@
+.logoHeader {
+    width: 20%;
+    @include flex ( row , center , center);
+
+    @include responsive (tl) {
+        width: 150px;
+    }
+
+    img {
+        width: 120px;
+
+        @include responsive (tl) {
+            margin-left: 15px;
+        }
+    }
+}

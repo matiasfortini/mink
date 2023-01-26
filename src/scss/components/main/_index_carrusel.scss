@@ -1,0 +1,36 @@
+.carrusel {
+    height: 120px;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+
+    .carrusel-track {
+        height: 100%;
+        animation: scroll 40s linear infinite;
+        width: calc(200px * 14);
+
+        @extend .flexBase;
+
+        .carruselItem {
+            width: 200px;
+            margin:  30px;
+
+            img {
+                width: 100%;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 7));
+    }
+}

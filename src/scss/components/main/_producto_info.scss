@@ -1,0 +1,236 @@
+.contenedorProducto {
+    height: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr repeat(2 , 500px) 1fr;
+
+    @include responsive (tl) {
+        @include flex (column , center , center);
+        height: auto;
+    }
+
+    .productoImg {
+        grid-column: 2/3;
+        height: 100%;
+
+        @include flex ( column , center , center );
+
+        .imagenPrincipal {
+            height: 70%;
+
+            @extend .flexBase;
+
+            img {
+                width: 90%;
+            }
+        }
+
+        .imagenSecundaria {
+            height: 30%;
+
+            @include flex ( row , space-around , center );
+
+            img {
+                width: 30%;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    .productoInfo {
+        grid-column: 3/4;
+        padding: 10px 0 0 40px;
+
+        @include responsive (tl) {
+
+            width: 100%;
+            margin-top: 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,auto-fill);
+        }
+
+        @include responsive (ml) {
+            @include flex ( column , center , start);
+        }
+
+        .rutaProducto {
+            color: $color_segundo;
+
+            @include responsive (tl) {
+                display: none;
+            }
+
+            span {
+                color: $color_primero;
+                font-weight: 700;
+            }
+        }
+
+        .titulo {
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+            h1 {
+                margin-top: 20px;
+                
+                @include txt ( 35px , 700 , $color_tercero );
+
+                @include responsive (tl) {
+                    font-size: 50px;
+                }
+
+                @include responsive (ms) {
+                    font-size: 30px;
+                }
+            }
+    
+            .precioProducto {
+                margin-top: 5px;
+
+                @include txt ( 25px , 600 , $color_primero );
+
+                @include responsive (tl) {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .info {
+
+            @include responsive (tl) {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                margin-top: 40px;
+            }
+
+            @include responsive (ml) {
+                width: 100%;
+                margin-top: 0;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-top: 20px;
+    
+                li {
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        
+        .compra {
+
+            @include responsive (tl) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+
+            .desplegablesProducto {
+                margin-top: 30px;
+    
+                @include flex ( row , start , center );
+
+                @include responsive (tl) {
+                    @include flex ( column , center , center );
+                }
+
+                @include responsive (ml) {
+                    @include flex ( row , space-between , center );
+                }
+
+                @include responsive (ms) {
+                    @include flex ( column , space-between , start );                  
+                }
+    
+                .colorProducto {
+    
+                    p {
+
+                        @include txt ( 17px , 700 , $color_primero );
+                    } 
+                }
+    
+                .talleProducto {
+                    margin-left: 50px;
+
+                    @include responsive (tl) {
+                        margin: 0;
+                    }
+
+                    @include responsive (ml) {
+                        margin-left: 50px; 
+                    }
+
+                    @include responsive (ms) {
+                        margin: 10px 0 20px 0;
+                    }
+    
+                    p {
+                        
+                        @include txt ( 17px , 700 , $color_primero );
+                    }
+                }
+    
+                .opcionesProducto {
+                    border: none;
+                    border-radius: 10px;
+                    background-color: $color_quinto;
+                    width: 180px;
+                    height: 35px;
+                    padding: 5px 0 5px 10px;
+                    margin-top: 5px;
+                }
+            }
+    
+            .comprarProducto {
+                margin-top: 10px;
+
+                @include responsive (tl) {
+                    @include flex ( row , center , center );
+                }
+    
+                .cantidad {
+                    border: none;
+                    border-radius: 10px;
+                    background-color: $color_quinto;
+                    width: 50px;
+                    height: 35px;
+                    padding-left: 10px;
+                }
+    
+                .comprar {
+                    margin-left: 15px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: $color_primero;
+                    width: 200px;
+                    height: 35px;
+
+                    @include txt ( 15px , 700 , $color_cuarto );
+    
+                    &:hover {
+                        border: 3px solid $color_primero;
+                        background-color: transparent;
+                        color: $color_primero;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+
+        .guiaTalles {
+            margin-top: 30px;
+            width: 450px;
+
+            @include responsive (tl) {
+                grid-column: 1/3;
+                grid-row: 3/4;
+                width: 100%;
+                align-items: center;
+            }
+        }  
+    }
+}

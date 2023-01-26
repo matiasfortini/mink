@@ -1,0 +1,17 @@
+@import './base/reset';
+
+@import './src/scss/abstracts/variables';
+@import '../scss/abstracts/extend';
+@import '../scss/abstracts/mixin';
+
+@import './layout/body';
+
+@import './layout/header';
+
+@import './layout/main_index';
+@import './layout/main_producto';
+@import './layout/main_pf';
+@import './layout/main_contacto';
+@import './layout/main_tienda';
+
+@import './layout/footer';

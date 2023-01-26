@@ -1,0 +1,9 @@
+header {
+    grid-row: 1/2;
+    height: 15vh;
+    @include flex ( row , space-between , center);
+    
+    @import '../components/header/header_logo';
+    @import '../components/header/header_nav';
+    @import '../components/header/header_rb';
+}

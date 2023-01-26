@@ -1,0 +1,9 @@
+.footerLogo {
+    margin-top: 25px;
+
+    @extend .flexBase;
+    
+    img {
+        width: 180px;
+    }
+}

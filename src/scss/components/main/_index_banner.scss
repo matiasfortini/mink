@@ -1,0 +1,30 @@
+.banner {
+    background-image: url(../../assets/img/slide1.png);
+    background-size: contain;
+    background-position: center;
+    height: 85vh;
+
+    @include responsive (ds) {
+        height: 70vh;
+    }
+
+    @include responsive (tl) {
+        height: 55vh;
+    }
+
+    @include responsive (ml) {
+        height: 40vh;
+    }
+
+    @include responsive (ms) {
+        height: 35vh;
+    }
+
+    @include responsive (s) {
+        height: 25vh;
+    }
+
+    h1 {
+        display: none;
+    }
+}

@@ -1,0 +1,7 @@
+.mainProducto {
+    grid-row: 2/3;
+
+    @import '../components/main/producto_info';
+    @import '../components/main/producto_pr';
+
+}

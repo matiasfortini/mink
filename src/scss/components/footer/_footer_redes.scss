@@ -1,0 +1,23 @@
+.footerRedes {
+    margin-top: 25px;
+
+    @extend .flexBase;
+    
+
+    .redes {
+        width: 350px;
+
+        @include flex (row , space-around , center);
+        
+
+        i {
+            font-size: 35px;
+            color: $color_segundo;
+
+            &:hover {
+                color: $color_primero;
+                transition: 0.5s;
+            }
+        }
+    }
+}

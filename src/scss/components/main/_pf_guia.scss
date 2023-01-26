@@ -1,0 +1,67 @@
+.guia {
+    width: 80%;
+    height: 100%;
+    margin-top: 40px;
+
+    @include responsive (tl) {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 800;
+        color: $color_tercero;
+        text-align: center;
+    }
+
+    .guiaCompra {
+        width: 100%;
+        margin-top: 50px;
+        flex-wrap: row;
+        padding: 10px;
+
+        @include flex ( row , space-around , start );
+
+        @include responsive (ml) {
+            @include flex ( column , center , center);
+        }
+
+        div {
+            width: 250px;
+            height: fit;
+
+            @include flex ( column , center , center );
+
+            @include responsive (ml) {
+                width: 90%;
+                margin: 35px 0;
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: $color_segundo;
+
+                @include responsive (ml) {
+                    font-size: 25px;
+                }
+            }
+
+            img {
+                height: 120px;
+
+                @include responsive (ml) {
+                    height: 200px;
+                }
+            }
+
+            .remera {
+                height: 140px;
+
+                @include responsive (ml) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}

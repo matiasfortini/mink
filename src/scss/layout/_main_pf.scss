@@ -1,0 +1,7 @@
+.mainPf {
+
+    @include flex ( column , center , center );
+
+    @import '../components/main/pf_guia';
+    @import '../components/main/pf_acordion';
+}

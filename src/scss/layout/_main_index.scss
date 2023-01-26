@@ -1,0 +1,9 @@
+.mainIndex {
+    grid-row: 2/3;
+
+    @import '../components/main/index_banner';
+    @import '../components//main/index_fc';
+    @import '../components/main/index_info';
+    @import '../components/main/index_gc';
+    @import '../components/main/index_carrusel';
+}

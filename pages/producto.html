@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="!No te pierdas tu nueva remera favorita!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/styles.css">    
+    
+    <title>Tu nueva remera favorita 👇🏻</title>
+</head>
+<body>
+    
+    <header>
+<!--    HEADER - LOGO     -->        
+        <section class="logoHeader">
+            <a href="../index.html">
+                <img src="../assets/img/minkLogoHeader.png" alt="Mink Logo">
+            </a>
+        </section>
+        
+<!--    HEADER - NAV    -->         
+        <section class="navHeader">
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check" id="menu">
+                <i class="fa-solid fa-bars" id="menu-abrir"></i>
+                <i class="fa-solid fa-xmark" id="menu-cerrar"></i>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./tienda.html">Tienda</a></li>
+                    <li><a href="./preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>            
+        </section>
+        
+<!--    HEADER - REDES SOCIALES + BUSCADOR     -->         
+        <section class="redesBuscador">
+            <div class="redesHeader">
+                <a href="https://www.facebook.com/profile.php?id=100087462481983" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/mink.remeras/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="buscadorHeader">
+                <form action="search" method="post">Buscá tu diseño...</form>
+            </div>
+        </section>
+    </header>
+
+    <main class="mainProducto">
+
+        <section class="contenedorProducto">
+
+<!--    PRODUCTO - IMAGENES PRODUCTO     -->            
+            <div class="productoImg">
+                <div class="imagenPrincipal">
+                    <img src="../assets/img/imgprincipal.png" alt="Tortugas Ninjas - Diseño">
+                </div>
+                <div class="imagenSecundaria">
+                    <img src="../assets/img/imgsecundaria2.png" alt="Tortugas Ninjas - comprar online">
+                    <img src="../assets/img/imgsecundaria3.png" alt="Tortugas Ninjas - Mink">
+                    <img src="../assets/img/imgsecundaria4.png" alt="Tortugas Ninjas - Remeras">
+                </div>
+            </div>
+
+<!--    PRODUCTO - INFO PRODUCTO     -->             
+            <div class="productoInfo">
+                <p class="rutaProducto"> Inicio / Remeras / Retro / <span>The Amazing Ninja Dude</span></p>
+                <div class="titulo">
+                    <h1>The Amazing Ninja Dude</h1>
+                    <p class="precioProducto">$ 4.800,00</p>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li>✔️ Algodón peinado súper cómodo.</li>
+                        <li>✔️ Estampa DTG con colores nítidos</li>
+                        <li>✔️ Confeccionado 100% en Argentina</li>
+                    </ul>
+                </div>
+
+                <div class="compra">
+                    <div class="desplegablesProducto">
+                        <div class="colorProducto">
+                            <p>Color:<br> 
+                                <select class="opcionesProducto" name="color">
+                                    <option>Negro</option>
+                                    <option>Blanco</option>
+                                    <option>Melange</option>
+                                    <option>Stone Washed</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="talleProducto">
+                            <p>Talle:<br> 
+                                <select class="opcionesProducto" name="color">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div> 
+
+                    <div class="comprarProducto">
+                        <form action="post">
+                            <input class="cantidad" type="number" name="cantidad" placeholder="1">
+                            <input class="comprar" type="button" value="Añadir al Carrito">
+                        </form>
+                    </div>                    
+                </div>
+                <img class="guiaTalles" src="../assets/img/talles.png" alt="Guía de Talles">
+            </div>
+        </section>
+
+<!--    PRODUCTO - PRODUCTOS RELACIONADOS     -->
+        <section class="productosRelacionados">
+            
+            <div class="relacionados">
+                <div class="imgRelacionada">
+                    <a href="./producto.html"><img src="../assets/img/remeramoon.png" alt="Remera Sailor Moon"></a>
+                </div>
+                <div class="infoRelacionada">
+                    <a href="./producto.html"><h2>Moon</h2></a>
+                    <p>$4800</p>
+                </div>
+            </div>
+
+            <div class="relacionados">
+                <div class="imgRelacionada">
+                    <a href="./producto.html"><img src="../assets/img/remeraSW.png" alt="Remera Star Wars"></a>
+                </div>
+                <div class="infoRelacionada">
+                    <a href="./producto.html"><h2>Join the Dark Side</h2></a>
+                    <p>$4800</p>
+                </div>
+            </div>
+
+            <div class="relacionados">
+                <div class="imgRelacionada">
+                    <a href="./producto.html"><img src="../assets/img/remerahelga.png" alt="Remera Helga"></a>
+                </div>
+                <div class="infoRelacionada">
+                    <a href="./producto.html"><h2 >Helga</h2></a>
+                    <p>$4800</p>
+                </div>
+            </div>
+
+            <div class="relacionados">
+                <div class="imgRelacionada">
+                    <a href="./producto.html"><img src="../assets/img/remeratheclowns.png" alt="Remera The Clowns"></a>
+                </div>
+                <div class="infoRelacionada">
+                    <a href="./producto.html"><h2 >The Clowns</h2></a>
+                    <p>$4800</p>
+                </div>
+            </div>
+
+            <div class="relacionados cinco">
+                <div class="imgRelacionada">
+                    <a href="./producto.html"><img src="../assets/img/remeraSH.png" alt="Remera Silverhawks"></a>
+                </div>
+                <div class="infoRelacionada">
+                    <a href="./producto.html"><h2 >Silverhawks</h2></a>
+                    <p>$4800</p>
+                </div>
+            </div>
+        </section>        
+
+    </main>
+
+    <footer>
+<!--    FOOTER - LOGO     -->        
+        <section class="footerLogo">
+            <a href="../index.html"><img src="../assets/img/MINK Logo Footer.png" alt="Mink Logo"></a>
+        </section>
+
+<!--    FOOTER - REDES     -->        
+        <section class="footerRedes">
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100087462481983" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/mink.remeras/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </section>
+
+<!--    FOOTER - MAIL     -->         
+        <section class="footerMail">
+            <div class="mail">
+                <i class="fa-regular fa-envelope"></i>
+                <a href="mailto: ventas@mink.ar"><p>ventas@mink.ar</p></a>
+            </div>
+        </section>
+
+<!--    FOOTER - DERECHOS     -->    
+        <section class="derechos">
+            <p>© Copyright Mink - 2022</p>
+            <p>Todos los derechos reservados.</p>
+        </section>
+    </footer>
+   
+    <script src="https://kit.fontawesome.com/e6b599fc46.js" crossorigin="anonymous"></script>
+</body>
+</html>

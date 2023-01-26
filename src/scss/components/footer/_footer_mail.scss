@@ -1,0 +1,31 @@
+.footerMail {
+    margin-top: 25px;
+
+    @extend .flexBase;
+
+    .mail {
+        width: 350px;
+
+        @extend .flexBase;
+
+        i {
+            font-size: 30px;
+            color: $color_segundo;
+        }
+        
+        a {
+            text-decoration: none;
+            margin-left: 15px;
+
+            p {
+
+                @include txt ( 20px , 500 , $color_segundo );
+
+                &:hover {
+                    color: $color_primero;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.mainContacto {
+    height: fit-content;
+
+    @extend .flexBase;
+
+    @import '../components/main/contacto_formulario';
+}

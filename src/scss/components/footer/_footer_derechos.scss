@@ -1,0 +1,11 @@
+.derechos {
+    margin: 25px 0 15px 0;
+    
+    @include flex ( row , space-between , center );
+
+    p {
+        margin: 0 50px;
+
+        @include txt ( 16px , 500 , $color_segundo );
+    }
+}

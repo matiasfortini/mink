@@ -1,0 +1,61 @@
+.presentacionTienda {
+    margin-top: 40px;
+
+    h1 {
+        text-align: center;
+
+        @include txt ( 50px , 800 , $color_primero );
+
+        @include responsive (ml) {
+
+            font-size: 30px;
+        }
+
+        @include responsive (ms) {
+
+            font-size: 20px;
+        }
+    } 
+}
+
+.tienda {
+    margin-top: 60px;
+    height: auto;
+    flex-wrap: wrap;
+
+    @include flex ( row , space-evenly , center );
+
+    .productoTienda {
+        width: 250px;
+        height: 500px;
+        margin: 10px 20px;
+    
+        @include flex ( column , space-between , center );
+
+        .imgProducto {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .infoProducto {
+            
+            a {
+                text-decoration: none;
+
+                h2 {
+
+                    @include txt ( 16px , 600 , $color_primero );
+                }
+            }
+
+            p {
+                text-align: center;
+
+                @include txt ( 16px , 600 , $color_segundo );
+            }
+        }
+    }
+}

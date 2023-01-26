@@ -1,0 +1,102 @@
+.info {
+    height: 10vh;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr repeat(3,30%) 1fr;
+
+    @include responsive (ds) {
+        grid-template-columns: repeat(3,33%);
+        justify-content: center;
+    }
+
+    @include responsive (tl) {
+        display: none;
+    }
+
+    .infoUno {
+        grid-column: 2/3;
+
+        @extend .flexBase;
+
+        @include responsive (ds) {
+            grid-column: 1/2;
+        }
+
+        i {
+            font-size: 30px;
+            color: $color_primero;
+        }
+
+        .txt {
+            margin-left: 15px;
+
+            h5 {
+
+                @include txt ( 16px , 600 , $color_primero );
+            }
+
+            p {
+
+                @include txt ( 15px , 500 , $color_segundo );
+            }
+        }
+    }
+
+    .infoDos {
+        border-left: 3px solid $color_segundo;
+        border-right: 3px solid $color_segundo;
+        grid-column: 3/4;
+
+        @extend .flexBase;
+
+        @include responsive (ds) {
+            grid-column: 2/3;
+        }
+
+        i {
+            font-size: 40px;
+            color: $color_primero;
+        }
+
+        .txt {
+            margin-left: 15px;
+
+            h5 {
+                @include txt ( 16px , 600 , $color_primero );
+            }
+
+            p {
+                
+                @include txt ( 15px , 500 , $color_segundo );
+            }
+        }
+    }
+
+    .infoTres {
+        grid-column: 4/5;
+
+        @extend .flexBase;
+
+        @include responsive (ds) {
+            grid-column: 3/4;
+        }
+
+        i {
+            font-size: 30px;
+            color: $color_primero;
+        }
+
+        .txt {
+            margin-left: 15px;
+
+            h5 {
+                @include txt ( 16px , 600 , $color_primero );
+            }
+
+            p {
+                
+                @include txt ( 15px , 500 , $color_segundo );
+            }
+        }
+    }
+}

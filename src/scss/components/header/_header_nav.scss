@@ -1,0 +1,97 @@
+.navHeader {
+    width: 60vw;
+    height: 100%;
+
+    @include responsive (tl) {
+        @include flex ( row , end , center );
+        width: 60px;
+    }
+
+    #menu-check {
+        display: none;
+
+        @include responsive (tl) {
+            &:not(:checked) ~ nav {
+                display: none;
+            }
+    
+            &:checked ~ nav {
+                display: block;
+            }
+
+            &:checked ~ label #menu-abrir {
+                display: none;
+            }
+
+            &:checked ~ label #menu-cerrar {
+                display: block;
+            }
+        }
+    }
+    
+    #menu {
+        display: none;
+
+        @include responsive (tl) {
+            display: block;
+            color: $color_segundo;
+            font-size: 25px;
+            margin-right: 20px;
+            z-index: 9999;
+        }
+
+        #menu-cerrar {
+
+            @include responsive (tl) {
+                display: none;
+            }
+        }
+    }
+
+    nav {
+        height: 100%;
+
+        @include responsive (tl) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 360px; 
+            height: 100vh;
+            background-color: $color_cuarto;
+            padding-top: 80px;
+            z-index: 1;
+        }
+        
+        ul {
+            height: 100%;
+           
+           @extend .flexBase;
+
+           @include responsive (tl) {
+                display: block;
+                text-align: left;
+           }
+
+           li {
+                list-style: none;
+                margin: 0 20px;
+
+                @include responsive (tl) {
+                    margin: 30px 30px;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $color_segundo;
+
+                    &:hover {
+                        color: $color_primero;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}

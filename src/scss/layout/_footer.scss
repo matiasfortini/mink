@@ -1,0 +1,8 @@
+footer {
+    grid-row: 3/4;
+
+    @import '../components/footer/footer_logo';
+    @import '../components/footer/footer_redes';
+    @import '../components/footer/footer_mail';
+    @import '../components/footer/footer_derechos';
+}

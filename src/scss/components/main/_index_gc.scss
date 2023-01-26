@@ -1,0 +1,161 @@
+.categorias {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr repeat(4,20%) 1fr;
+    grid-template-rows: repeat(2,1fr);
+    gap: 15px;
+    margin-top: 30px;
+
+    @include responsive (ds) {
+        grid-template-columns: repeat(4,23%);
+        justify-content: center;
+    }
+
+    @include responsive (ml) {
+        @include flex ( column , center , center );
+        height: 200vh;
+    }
+
+    .categoriaUno {
+        background-image: url(../../assets/img/categoriaretro2.png);
+        background-size: cover;
+        grid-column: 2/4;
+        grid-row: 1/3;
+        border-radius: 30px;
+
+        @extend .flexBase;
+
+        @include responsive (ds) {
+            grid-column: 1/3;
+        }
+
+        @include responsive (tl) {
+            background-image: url(../../assets/img/categoriaretro.png);
+            background-position-x: 50%;
+        }
+
+        @include responsive (ml) {
+            width: 90%;
+            height: 100%;
+            background-position-y: 25%;
+
+            @include flex ( row , start , center )
+        }
+
+        &:hover {
+            background-image: url(../../assets/img/categoriaretro.png);
+            transition: 1s;
+        }
+
+        button {
+            width: 250px;
+            height: 50px;
+            background-color: $color_primero;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+
+            @include responsive (ml) {
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .categoriaDos {
+        background-image: url(../../assets/img/categoriaanime2.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: none;
+        grid-column: 4/6;
+        grid-row: 1/2;
+        border-radius: 30px;
+
+        @extend .flexBase;
+
+        @include responsive (ds) {
+            grid-column: 3/5;
+        }
+
+        @include responsive (tl) {
+            background-image: url(../../assets/img/categoriaanime.png);
+        }
+
+        @include responsive (ml) {
+            width: 90%;
+            height: 100%;
+
+            @include flex ( row , start , center )
+        }
+
+        &:hover {
+            background-image: url(../../assets/img/categoriaanime.png);
+            transition: 1s;
+        }
+
+        button {
+            width: 250px;
+            height: 50px;
+            background-color: $color_primero;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+
+            @include responsive (ml) {
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .categoriaTres {
+        background-image: url(../../assets/img/categoriavideojuegos2.png);
+        background-size: cover;
+        background-position: center;
+        grid-column: 4/6;
+        grid-row: 2/3;
+        border-radius: 30px;
+
+        @extend .flexBase;
+
+        &:hover {
+            background-image: url(../../assets/img/categoriavideojuegos.png);
+            transition: 1s;
+        }       
+
+        @include responsive (ds) {
+            grid-column: 3/5;
+        }
+
+        @include responsive (tl) {
+            background-image: url(../../assets/img/categoriavideojuegos.png);
+        }
+
+        @include responsive (ml) {
+            width: 90%;
+            height: 100%;
+
+            @include flex ( row , start , center )
+        }        
+
+        button {
+            width: 250px;
+            height: 50px;
+            background-color: $color_primero;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+
+            @include responsive (ml) {
+                margin-left: 50px;
+            }
+        }
+    }
+}
